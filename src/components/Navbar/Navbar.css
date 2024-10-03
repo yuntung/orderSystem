@@ -1,0 +1,68 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-logo img {
+    height: 65px; /* Adjust logo size */
+  }
+  
+  .navbar-user-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .login-btn, .signup-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .login-btn:hover, .signup-btn:hover {
+    color: #F8AB47; /* change hover color*/
+  }
+  
+  .login-btn:focus, .signup-btn:focus {
+    outline: none;
+  }
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-user-icons {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .login-btn, .signup-btn {
+    font-size: 14px;
+  }
+}
+
+/* For smaller screen */
+@media screen and (max-width:320px) {
+  .navbar-logo img {
+    height: 40px;
+  }
+
+  .login-btn, .signup-btn {
+    font-size: 12px;
+  }
+}

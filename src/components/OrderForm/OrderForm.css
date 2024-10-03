@@ -1,0 +1,385 @@
+.order-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.order-form {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form-section {
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Styles for DeliveryTime */
+.delivery-time-group {
+  margin-bottom: 1rem;
+}
+
+.delivery-time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.delivery-time-option {
+  display: flex;
+}
+
+.delivery-time-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+}
+
+.delivery-time-select option {
+  font-size: 16px;
+  padding: 12px;
+}
+
+.anytime-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.anytime-button:hover {
+  background-color: #F8AB47;
+}
+
+.anytime-button.selected {
+  background-color: #F8AB47;
+  color: white;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.product-table,
+.chair-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.product-table th,
+.product-table td,
+.chair-table th,
+.chair-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.product-table th,
+.chair-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.product-table input,
+.chair-table input {
+  width: 100%;
+  padding: 0.25rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.submit-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #F8AB47;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #e59a36;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .delivery-time-select,
+  .delivery-time-select option {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .delivery-time-select {
+    height: 50px;
+  }
+
+  .order-form-container {
+    padding: 0.5rem;
+    padding-top: 60px;
+  }
+  
+  .order-form {
+    padding: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.75rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="date"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+  }
+
+  .delivery-time-options {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .delivery-time-option {
+    padding: 0.4rem;
+  }
+
+  .delivery-time-option span {
+    font-size: 0.8rem;
+  }
+
+  .product-table,
+  .chair-table {
+    font-size: 0.8rem;
+  }
+
+  .product-table th,
+  .product-table td,
+  .chair-table th,
+  .chair-table td {
+    padding: 0.3rem;
+  }
+
+  .submit-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery-time-select,
+  .delivery-time-select option {
+    font-size: 18px; 
+    padding: 16px; 
+  }
+
+  .delivery-time-select {
+    height: 55px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+  }
+  .order-form-container {
+    padding: 0.25rem;
+    padding-top: 40px;
+  }
+
+  .order-form {
+    padding: 0.5rem;
+  }
+
+  .order-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="date"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 0.85rem;
+    padding: 0.3rem;
+  }
+
+  .delivery-time-grid {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .delivery-time-select,
+  .anytime-button {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+
+  .product-table,
+  .chair-table {
+    font-size: 0.75rem;
+  }
+
+  .product-table th,
+  .product-table td,
+  .chair-table th,
+  .chair-table td {
+    padding: 0.2rem;
+  }
+
+  .submit-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 399px) {
+  .delivery-time-select,
+  .delivery-time-select option {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .delivery-time-select {
+    height: 50px;
+  }
+  
+  .order-form-container {
+    padding: 0.2rem;
+    padding-top: 30px;
+  }
+
+  .order-form {
+    padding: 0.3rem;
+  }
+
+  .order-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-group label {
+    font-size: 0.8rem;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="tel"],
+  .form-group input[type="date"],
+  .form-group input[type="email"],
+  .form-group textarea {
+    font-size: 0.8rem;
+    padding: 0.25rem;
+  }
+
+  .delivery-time-select,
+  .anytime-button {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .product-table,
+  .chair-table {
+    font-size: 0.7rem;
+  }
+
+  .product-table th,
+  .product-table td,
+  .chair-table th,
+  .chair-table td {
+    padding: 0.15rem;
+  }
+
+  .submit-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
